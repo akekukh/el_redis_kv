@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  redis:
+    image: redis:latest
+    stdin_open: true
+    expose:
+      - 6379
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
+    ports:
+      - 6379:6379/tcp
